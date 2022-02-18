@@ -1,7 +1,9 @@
 const tagHugo = '{{< highlight react >}} ....qualquer coisa aqui {{< /highlight >}}';
 
-const regexes = {
-  HUGO_HIGHLIGHT: /{{<\s?highlight\s?(\w+)?\s?>}}/g
+const regexps = {
+  HUGO_HIGHLIGHT: /{{<\s?highlight\s?(\w+)?\s?>}}/g,
+  HUGO_VIMEO: /{{<\s?vm\sid="(\w+)"?\s?>}}/g,
+  HUGO_EXTLINK: /{{<\s?extlink\stext="(.+)"\s?href="(.+)"\s?>}}/g,
 }
 
 const tagTypes = {
@@ -15,7 +17,7 @@ function hugoTagsReplacer(_match, attribute) {
     return `\`\`\`${attribute}`;
 }
 
-const tagHugoTeste = tagHugo.replace(regexes.HUGO_HIGHLIGHT, hugoTagsReplacer);
+const tagHugoTeste = tagHugo.replace(regexps.HUGO_HIGHLIGHT, hugoTagsReplacer);
 
 console.log(tagHugoTeste);
   
