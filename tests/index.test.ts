@@ -57,6 +57,13 @@ describe('transforma abertura para markdown', () => {
     const result = replaceHugoWithMarkdown(`{{< figure src="${src}" class="" caption="${caption}" width="" >}}`);
     expect(result).to.equal(expected);
   });
+
+  it('Verifica tag {{< figure src="" >}}', () => {
+    const src = 'images/test.png'
+    const expected = `![](${src})`;
+    const result = replaceHugoWithMarkdown(`{{< figure src="${src}" >}}`);
+    expect(result).to.equal(expected);
+  });
   
   
   it('Remove tag {{< next-btn >}}', () => {
