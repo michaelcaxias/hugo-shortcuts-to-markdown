@@ -2,22 +2,26 @@
 
 # Shortcodes do Hugo para Modularização
 
-Projeto feito de forma individual durante o curso da [Trybe](https://www.betrybe.com/) com o objetivo de implementar testes unitários para funções já existentes do Javascript.
-
-## 🔧 Conversão de Shortcodes
-- `{{< extlink text="My Awesome External Link" href="https://www.example.com" >}}` para `![My Awesome External Link](https://www.example.com)`
+Projeto feito com o intuito de automatizar a substituição de atalhos do Hugo para o formato necessário para modularização. 
 
 ## 💻 Como iniciar
 
 1. Faça o clone do projeto
 3. Abra o terminal e instale as dependências
-```
+```shell
 npm install
 ```
 4. Verifique os testes da aplicação com o comando
-```
+```shell
 npm test
 ```
+5. Inicie o script passando o `caminho do arquivo a ser substituido` e o `caminho de output após a substituição` (opcional)
+```shell
+npm run convert index.md
+```
+
+## 🔧 Conversão de Shortcodes
+- `{{< extlink text="My Awesome External Link" href="https://www.example.com" >}}` para `![My Awesome External Link](https://www.example.com)`
 
 ## Feito Com:
 [![IDE](https://img.shields.io/badge/Visual_studio_code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)](https://code.visualstudio.com/)
