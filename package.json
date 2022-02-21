@@ -5,7 +5,7 @@
   "main": "index.ts",
   "scripts": {
     "test": "mocha --require ts-node/register ./**/*.test.ts",
-    "start": "node index.js"
+    "convert": "ts-node index.ts"
   },
   "keywords": [],
   "author": "",

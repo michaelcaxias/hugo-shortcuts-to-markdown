@@ -1,4 +1,4 @@
-import { convertHugoFileToMarkdown } from ".";
+import { convertHugoFileToMarkdown } from "./convertHugoToMarkdown";
 
 const file = "./index.md";
 const output = "./output.md";
