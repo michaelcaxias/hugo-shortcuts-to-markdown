@@ -46,7 +46,7 @@ npm run convert index.md
 
 
 ## 🔧 Conversão de Shortcodes
-  - `{{< extlink text="My Awesome External Link" href="https://www.example.com" >}}` para `![My Awesome External Link](https://www.example.com)`
+  Todas as substituições que este script realiza estão documentadas [neste repositório](https://github.com/betrybe/hello-summers/blob/main/modularizacao/substituicoes-de-shortcodes/_index.md).
 
 ## Feito Com:
 [![IDE](https://img.shields.io/badge/Visual_studio_code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)](https://code.visualstudio.com/)
