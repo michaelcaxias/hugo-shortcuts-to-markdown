@@ -1,4 +1,3 @@
-import sinon from 'sinon';
 import { expect } from 'chai';
 import { replaceHugoWithMarkdown } from '../convertHugoToMarkdown';
 
@@ -15,7 +14,7 @@ describe('transforma abertura para markdown', () => {
     expect(result).to.equal(expected);
   });
 
-  it('Verifica tag {{<versioning-your-code >}}', () => {
+  it('Verifica tag {{< versioning-your-code >}}', () => {
     const expected = '<!-- importar objeto c9a1c1f5-1761-4749-8125-12b6495abc76 -->';
     const result = replaceHugoWithMarkdown('{{<versioning-your-code >}}');
     expect(result).to.equal(expected);
@@ -50,11 +49,11 @@ describe('transforma abertura para markdown', () => {
     expect(result).to.equal(expected);
   });
 
-  it('Verifica tag {{ <figure src="" class="" caption="" width="" /> }}', () => {
+  it('Verifica tag {{< figure src="" class="" caption="" width="" >}}', () => {
     const src = 'images/test.png'
     const caption = 'texto de caption'
     const expected = `|![${caption}](${src})|\n|:--:|\n|${caption}|`;
-    const result = replaceHugoWithMarkdown(`{{ <figure src="${src}" class="" caption="${caption}" width="" /> }}`);
+    const result = replaceHugoWithMarkdown(`{{< figure src="${src}" class="" caption="${caption}" width="" >}}`);
     expect(result).to.equal(expected);
   });
 
