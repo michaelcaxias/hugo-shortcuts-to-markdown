@@ -27,9 +27,12 @@ Observe o código abaixo:
   }
 {{< /highlight >}}
 
-Interessante, né? Agora observe a imagem abaixo explicando o funcionamento do código.
+Interessante, né? Agora observe as imagens abaixo explicando o funcionamento do código.
 
-{{< figure src="images/render-step-by-step.png" >}}
+{{< figure src="images/render-step-by-step1.png" caption="Passo a passo" >}}
+
+{{< figure src="images/render-step-by-step2.png" >}}
+
 
 ## Exercícios
 

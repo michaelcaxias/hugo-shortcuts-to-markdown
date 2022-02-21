@@ -27,11 +27,14 @@ Observe o código abaixo:
   }
 ```
 
-Interessante, né? Agora observe a imagem abaixo explicando o funcionamento do código.
+Interessante, né? Agora observe as imagens abaixo explicando o funcionamento do código.
 
-|![](images/render-step-by-step.png)|
+|![Passo a passo](images/render-step-by-step1.png)|
 |:--:|
-||
+|Passo a passo|
+
+[](images/render-step-by-step2.png)
+
 
 ## Exercícios
 
