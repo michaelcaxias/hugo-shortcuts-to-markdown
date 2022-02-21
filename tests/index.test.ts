@@ -1,6 +1,6 @@
 import sinon from 'sinon';
 import { expect } from 'chai';
-import { replaceHugoWithMarkdown } from '..';
+import { replaceHugoWithMarkdown } from '../convertHugoToMarkdown';
 
 describe('transforma abertura para markdown', () => {
   it('Verifica tag {{< highlight react >}}', () => {
