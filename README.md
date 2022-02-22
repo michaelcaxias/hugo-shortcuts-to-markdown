@@ -2,22 +2,51 @@
 
 # Shortcodes do Hugo para Modularização
 
-Projeto feito de forma individual durante o curso da [Trybe](https://www.betrybe.com/) com o objetivo de implementar testes unitários para funções já existentes do Javascript.
-
-## 🔧 Conversão de Shortcodes
-- `{{< extlink text="My Awesome External Link" href="https://www.example.com" >}}` para `![My Awesome External Link](https://www.example.com)`
+Projeto feito com o intuito de automatizar a substituição de atalhos do Hugo para o formato necessário para modularização. 
 
 ## 💻 Como iniciar
 
 1. Faça o clone do projeto
 3. Abra o terminal e instale as dependências
-```
-npm install
+```shell
+npm i
 ```
 4. Verifique os testes da aplicação com o comando
-```
+```shell
 npm test
 ```
+5. Inicie o script passando o `caminho do arquivo a ser substituido` e o `caminho de output após a substituição` (opcional)
+```shell
+npm run convert index.md
+```
+
+## ⭐ Exemplo de uso
+  1. Arquivo de entrada
+  ```markdown
+    //index.md
+  
+    ## Clique no link abaixo para realizar os exercícios:
+  
+    {{< extlink text="Exercicios" href="https://www.exercicios.com" >}}
+  
+  ```
+  2. Executando o script
+  ```shell
+  npm run convert index.md
+  ```
+  3. Arquivo de saída
+  ```
+    //index-output.md
+
+    ## Clique no link abaixo para realizar os exercícios:
+
+    ![Exercicios](https://www.exercicios.com)
+  ```
+  Note que caso o segundo argumento não seja passado, um arquivo `index-output.md` é criado com a saída esperada.
+
+
+## 🔧 Conversão de Shortcodes
+  Todas as substituições que este script realiza estão documentadas [neste repositório](https://github.com/betrybe/hello-summers/blob/main/modularizacao/substituicoes-de-shortcodes/_index.md).
 
 ## Feito Com:
 [![IDE](https://img.shields.io/badge/Visual_studio_code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)](https://code.visualstudio.com/)
