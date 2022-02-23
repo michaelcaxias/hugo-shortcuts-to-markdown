@@ -50,17 +50,17 @@ describe('transforma abertura para markdown', () => {
     expect(result).to.equal(expected);
   });
 
-  it('Verifica tag {{< figure src="" class="" caption="" width="" >}}', () => {
+  it('Verifica tag {{< figure src="" caption="" class="" width="" >}}', () => {
     const src = 'images/test.png'
     const caption = 'texto de caption'
     const expected = `|![${caption}](${src})|\n|:--:|\n|${caption}|`;
-    const result = replaceHugoWithMarkdown(`{{< figure src="${src}" class="" caption="${caption}" width="" >}}`);
+    const result = replaceHugoWithMarkdown(`{{< figure src="${src}" caption="${caption}" class=""  width="" >}}`);
     expect(result).to.equal(expected);
   });
 
   it('Verifica tag {{< figure src="" >}}', () => {
     const src = 'images/test.png'
-    const expected = `![](${src})`;
+    const expected = `![test](${src})`;
     const result = replaceHugoWithMarkdown(`{{< figure src="${src}" >}}`);
     expect(result).to.equal(expected);
   });

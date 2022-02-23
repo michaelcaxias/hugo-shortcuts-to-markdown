@@ -33,7 +33,7 @@ Interessante, né? Agora observe as imagens abaixo explicando o funcionamento do
 |:--:|
 |Passo a passo|
 
-[](images/render-step-by-step2.png)
+![render-step-by-step2](images/render-step-by-step2.png)
 
 
 ## Exercícios

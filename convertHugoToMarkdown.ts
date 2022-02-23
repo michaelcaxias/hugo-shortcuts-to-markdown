@@ -25,9 +25,11 @@ const REGEXPS = {
       `[${text}](${href})`,
   },
   HUGO_FIGURE: {
-    regexp: /{{\s*<\s*figure\s*src="(.+?)"\s.*caption="(.+?)".*>\s*}}/g,
-    replacer: (_match: string, src: string, caption: string) =>
-      `|![${caption}](${src})|\n|:--:|\n|${caption}|`,
+    regexp: /{{\s*<\s*figure\s+(?:[a-z]+=".*?")*?\s*(?:src="(.*?)")\s*(?:[a-z]+=".*?")*?\s*(?:caption="(.*?)")?\s*(?:[a-z]+=".*"\s*)*>\s*}}/g,
+    replacer: (_match: string, src: string, caption: string) => {
+      if (!caption) return `![${src.split('/').pop()?.split('.').shift()}](${src})`
+      return `|![${caption}](${src})|\n|:--:|\n|${caption}|`;
+    }
   },
   HUGO_NEXT_BTN: {
     regexp: /{{\s*<\s*next-btn\s*>\s*}}/g,
